@@ -1,15 +1,55 @@
+// {
+//   "parser": "babel-eslint",
+//   "rules": {
+//     "max-len": [1, 120, 2, {"ignoreComments": true}],
+//     "prop-types": [0],
+//     "no-unused-vars": 0,
+//     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+//     "quotes": [ 2, "double", "avoid-escape" ]
+//     // standard airbnb style can be overridden here
+//     // "quote-props": [0]
+//   },
+//   "extends": ["airbnb"],
+//   // fixing issue of Eslint errorring importing jsx without extension
+//   "settings": {
+//     "import/resolver": {
+//       "node": {
+//         "extensions": [".js",".jsx"]
+//       }
+//     }
+//   },
+//   "env": {
+//     "browser": true
+//   }
+// }
+
 {
-  "parser": "babel-eslint",
+  "extends": ["airbnb"],
   "rules": {
+    // eslint-airbnb rules
     "max-len": [1, 120, 2, {"ignoreComments": true}],
     "prop-types": [0],
     "no-unused-vars": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "quotes": [ 2, "double", "avoid-escape" ]
-    // standard airbnb style can be overridden here
-    // "quote-props": [0]
+    "quotes": [ 2, "double", "avoid-escape" ],
+    // "prettier/prettier": [
+    //   // customizing prettier rules (unfortunately not many of them are customizable)
+    //   "error",
+    //   {
+    //     "singleQuote": true,
+    //     "trailingComma": "all",
+    //     "tabWidth": 2,
+    //     "printWidth": 80,
+    //     "bracketSpacing": true
+    //   }
+    // ],
+    "eqeqeq": ["error", "always"], // adding some custom ESLint rules
+    "no-console": 0
   },
-  "extends": ["airbnb-base"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
   // fixing issue of Eslint errorring importing jsx without extension
   "settings": {
     "import/resolver": {

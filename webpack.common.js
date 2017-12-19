@@ -13,6 +13,7 @@ module.exports = {
     // [hash] adds a cache busting string to the file
     filename: 'bundle.js',
   },
+  resolve: {extensions: ['.js','.jsx']},
   module: {
     rules: [
       // {
